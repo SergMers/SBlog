@@ -1,0 +1,9 @@
+post_index:
+    path:     /
+    defaults: { _controller: "MSBlogBundle:Post:index" }
+    methods:  GET
+
+post_show:
+    path:     /{id}
+    defaults: { _controller: "MSBlogBundle:Post:show" }
+    methods:  GET

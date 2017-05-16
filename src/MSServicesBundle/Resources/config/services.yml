@@ -1,0 +1,4 @@
+services:
+#    ms_services.example:
+#        class: MSServicesBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

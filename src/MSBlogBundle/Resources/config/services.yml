@@ -1,0 +1,4 @@
+services:
+#    ms_blog.example:
+#        class: MSBlogBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

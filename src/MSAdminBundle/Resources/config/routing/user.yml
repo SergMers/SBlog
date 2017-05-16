@@ -1,0 +1,24 @@
+admin_user_index:
+    path:     /
+    defaults: { _controller: "MSAdminBundle:AdminUser:index" }
+    methods:  GET
+
+admin_user_show:
+    path:     /show/{id}
+    defaults: { _controller: "MSAdminBundle:AdminUser:show" }
+    methods:  GET
+
+admin_user_new:
+    path:     /new
+    defaults: { _controller: "MSAdminBundle:AdminUser:new" }
+    methods:  [GET, POST]
+
+admin_user_edit:
+    path:     /edit/{id}
+    defaults: { _controller: "MSAdminBundle:AdminUser:edit" }
+    methods:  [GET, POST]
+
+user_delete:
+    path:     /delete/{id}
+    defaults: { _controller: "MSAdminBundle:AdminUser:delete" }
+    methods:  DELETE

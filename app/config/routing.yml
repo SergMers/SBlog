@@ -1,0 +1,18 @@
+#ms_services:
+#    resource: "@MSServicesBundle/Resources/config/routing.yml"
+#    prefix:   /
+
+ms_admin:
+    resource: "@MSAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+ms_blog:
+    resource: "@MSBlogBundle/Resources/config/routing.yml"
+    prefix:   /post
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+    
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block header %} 
+            <header>Блог программиста</header>
+        {% endblock %}
+        {% block navigator %} 
+            <nav>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">О сайте</a></li>
+                <li><a href="#">Форум</a></li>
+                <li><a href="#">Ещё</a></li>
+                <li><a href="#">Ещё</a></li>
+            </nav>
+        {% endblock %}
+        {% block body %}{% endblock %}
+        {% block sidebar %}
+            <aside>
+                <ul>
+                    <li><a href="#">Рубрикатор</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Последние статьи</a></li>
+                </ul>
+            </aside>
+        {% endblock %}
+        {% block footer %}
+            <footer>
+                Футер
+            </footer>
+        {% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

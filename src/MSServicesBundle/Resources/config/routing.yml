@@ -1,0 +1,3 @@
+ms_services_homepage:
+    path:     /
+    defaults: { _controller: MSServicesBundle:Default:index }

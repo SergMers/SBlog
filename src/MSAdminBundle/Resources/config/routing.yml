@@ -1,0 +1,7 @@
+ms_admin_post:
+    resource: "@MSAdminBundle/Resources/config/routing/post.yml"
+    prefix:   /
+
+ms_admin_user:
+    resource: "@MSAdminBundle/Resources/config/routing/user.yml"
+    prefix:   /user
