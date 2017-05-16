@@ -21,7 +21,7 @@ class PostController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $posts = $em->getRepository('MSBlogBundle:Post')->findAll();
-
+        $posts = $this->get('ms_services.aside')->Hello();
         return $this->render('MSBlogBundle:post:index.html.twig', array(
             'posts' => $posts,
         ));
