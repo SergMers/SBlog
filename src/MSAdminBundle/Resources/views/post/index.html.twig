@@ -30,7 +30,7 @@
                             <a href="{{ path('post_show', { 'id': post.id }) }}">show</a>
                         </li>
                         <li>
-                            <a href="{{ path('post_edit', { 'id': post.id }) }}">edit</a>
+                            <a href="{{ path('admin_post_edit', { 'id': post.id }) }}">edit</a>
                         </li>
                     </ul>
                 </td>
@@ -41,7 +41,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('post_new') }}">Create a new post</a>
+            <a href="{{ path('admin_post_new') }}">Create a new post</a>
         </li>
     </ul>
 {% endblock %}

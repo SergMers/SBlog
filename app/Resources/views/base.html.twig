@@ -3,21 +3,33 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="/css/normalize.css"/>
+            <link rel="stylesheet" href="/css/main.css"/>
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
         {% block header %} 
-            <header>Блог программиста</header>
+            <header class="blog-header clearfix">
+                <a class="blog-header-logo" href="#">
+                    <img src="/img/index-logo1.png" alt="NeruDev.ru" width="170" height="140">
+                </a>
+                <h1 class="blog-header-title">
+                    <a href="#">Нерюнгринский программист</a>
+                </h1>
+                <h2 class="blog-header-description">Местечковый IT-Блог</h2>
+                <nav class="blog-header-navigation">
+                    <ul>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">О сайте</a></li>
+                        <li><a href="#">Форум</a></li>                        
+                    </ul>
+                </nav>                
+            </header>
         {% endblock %}
         {% block navigator %} 
-            <nav>
-                <li><a href="#">Блог</a></li>
-                <li><a href="#">О сайте</a></li>
-                <li><a href="#">Форум</a></li>
-                <li><a href="#">Ещё</a></li>
-                <li><a href="#">Ещё</a></li>
-            </nav>
+
         {% endblock %}
         {% block body %}{% endblock %}
         {% block sidebar %}

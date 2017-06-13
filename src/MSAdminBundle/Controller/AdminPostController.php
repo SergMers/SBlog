@@ -2,7 +2,7 @@
 
 namespace MSAdminBundle\Controller;
 
-use AppBundle\Entity\Post;
+use MSBlogBundle\Entity\Post;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -45,7 +45,7 @@ class AdminPostController extends Controller
             return $this->redirectToRoute('post_show', array('id' => $post->getId()));
         }
 
-        return $this->render('post/new.html.twig', array(
+        return $this->render('MSAdminBundle:new.html.twig', array(
             'post' => $post,
             'form' => $form->createView(),
         ));
@@ -59,7 +59,7 @@ class AdminPostController extends Controller
     {
         $deleteForm = $this->createDeleteForm($post);
 
-        return $this->render('post/show.html.twig', array(
+        return $this->render('MSAdminBundle:post:show.html.twig', array(
             'post' => $post,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -71,6 +71,7 @@ class AdminPostController extends Controller
      */
     public function editAction(Request $request, Post $post)
     {
+
         $deleteForm = $this->createDeleteForm($post);
         $editForm = $this->createForm('MSBlogBundle\Form\PostType', $post);
         $editForm->handleRequest($request);
@@ -78,10 +79,10 @@ class AdminPostController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('post_edit', array('id' => $post->getId()));
+            return $this->redirectToRoute('admin_post_edit', array('id' => $post->getId()));
         }
 
-        return $this->render('post/edit.html.twig', array(
+        return $this->render('MSAdminBundle:post:edit.html.twig', array(
             'post' => $post,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
@@ -116,7 +117,7 @@ class AdminPostController extends Controller
     private function createDeleteForm(Post $post)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('post_delete', array('id' => $post->getId())))
+            ->setAction($this->generateUrl('admin_post_delete', array('id' => $post->getId())))
             ->setMethod('DELETE')
             ->getForm()
         ;

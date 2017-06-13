@@ -1,0 +1,6 @@
+Шапка:
+	blog-header
+	blog-header-logo
+	blog-header-title
+	blog-header-description
+	blog-header-navigation
